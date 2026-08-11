@@ -33,6 +33,12 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,248,245,.92);backdro
 .hero{padding:56px 0 32px;display:grid;gap:24px}
 @media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr;padding:88px 0 48px;align-items:end}}
 .badge{display:inline-flex;border:1px solid var(--line);background:#fff;padding:6px 12px;border-radius:999px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.headshot-row{display:flex;align-items:center;gap:16px;margin-top:22px}
+.headshot{width:64px;height:64px;border-radius:18px;object-fit:cover;border:1px solid var(--line);box-shadow:0 8px 24px -12px rgba(0,0,0,.35);background:#fff}
+@media(min-width:768px){.headshot{width:76px;height:76px;border-radius:20px}}
+.headshot-meta{line-height:1.2}
+.headshot-name{font-family:'Playfair Display';font-size:16px;font-weight:600}
+.headshot-title{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}
 .h1{font-family:'Playfair Display';font-size:56px;line-height:.85;letter-spacing:-.04em;font-weight:600;margin-top:20px}
 @media(min-width:768px){.h1{font-size:88px}}
 .h1 i{font-weight:400;color:var(--accent2);font-style:italic;display:block}
@@ -151,6 +157,14 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
 <section class="container hero">
   <div>
     <div class="badge">Available for opportunities · Australian Permanent Resident</div>
+    <div class="headshot-row">
+      <img class="headshot" src="headshot.jpg" alt="Dawid Vermaak" onerror="this.style.display='none'">
+      <div class="headshot-meta">
+        <div class="headshot-name serif">Dawid Vermaak</div>
+        <div class="headshot-title">CA (SA) · CPA Australia · 20+ Years</div>
+        <div style="margin-top:5px;font-size:10px;color:var(--muted)">Joanna, SA · Permanent Resident</div>
+      </div>
+    </div>
     <h1 class="h1">DAWID<i>VERMAAK</i></h1>
     <div class="h1-sub">Treasury · Corporate Finance · Financial Management &nbsp;&nbsp;|&nbsp;&nbsp; CA (SA) · CPA Australia · 20+ Years</div>
     <p class="hero-copy">Senior finance professional with 20+ years' experience across treasury, corporate finance, financial control, banking and investment environments.</p>
