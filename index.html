@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dawid Vermaak — Finance Professional</title>
+<title>Dawid Vermaak — Finance & Treasury Executive</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#FAF8F5;--ink:#1A1A1A;--muted:#8A7E74;--line:#E9E2DA;--line2:#F0E9E0;--accent:#C17A4A;--accent2:#A05C2E;--white:#fff}
@@ -30,33 +30,35 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,248,245,.92);backdro
 .btn:hover{background:#000}
 .btn-light{height:36px;padding:0 18px;border-radius:999px;background:#fff;border:1px solid var(--line);display:inline-flex;align-items:center;font-size:11.5px;letter-spacing:.08em}
 /* hero */
-.hero{padding:56px 0 32px;display:grid;gap:24px}
-@media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr;padding:88px 0 48px;align-items:end}}
+.hero{padding:56px 0 32px;display:grid;gap:32px;align-items:start}
+@media(min-width:900px){.hero{grid-template-columns:1.15fr .85fr;padding:80px 0 48px;align-items:center}}
 .badge{display:inline-flex;border:1px solid var(--line);background:#fff;padding:6px 12px;border-radius:999px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.headshot-row{display:flex;align-items:center;gap:16px;margin-top:22px}
-.headshot{width:64px;height:64px;border-radius:18px;object-fit:cover;border:1px solid var(--line);box-shadow:0 8px 24px -12px rgba(0,0,0,.35);background:#fff}
-@media(min-width:768px){.headshot{width:76px;height:76px;border-radius:20px}}
-.headshot-meta{line-height:1.2}
-.headshot-name{font-family:'Playfair Display';font-size:16px;font-weight:600}
-.headshot-title{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.h1{font-family:'Playfair Display';font-size:56px;line-height:.85;letter-spacing:-.04em;font-weight:600;margin-top:20px}
-@media(min-width:768px){.h1{font-size:88px}}
+.headshot-row{display:flex;align-items:center;gap:14px;margin-top:22px}
+.headshot{width:56px;height:56px;border-radius:16px;object-fit:cover;border:1px solid var(--line);box-shadow:0 8px 20px -12px rgba(0,0,0,.3);background:#fff}
+@media(min-width:768px){.headshot{width:64px;height:64px;border-radius:18px}}
+.headshot-meta{line-height:1.15}
+.headshot-name{font-family:'Playfair Display';font-size:14px;font-weight:600}
+.headshot-title{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.h1{font-family:'Playfair Display';font-size:44px;line-height:.85;letter-spacing:-.04em;font-weight:600;margin-top:18px}
+@media(min-width:768px){.h1{font-size:62px}}
+@media(min-width:1100px){.h1{font-size:68px}}
 .h1 i{font-weight:400;color:var(--accent2);font-style:italic;display:block}
-.h1-sub{margin-top:14px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.h1-sub{margin-top:16px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
 .hero-copy{font-size:17px;line-height:1.7;color:#3A3530;font-weight:300;max-width:560px;margin-top:24px}
 .hero-copy2{margin-top:12px;font-size:14.5px;line-height:1.7;color:#6B6560;max-width:520px}
 .hero-actions{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-.hero-side{padding-top:12px}
-@media(min-width:900px){.hero-side{padding-bottom:12px}}
+.hero-side{padding-top:12px;display:flex;flex-direction:column;justify-content:center}
+@media(min-width:900px){.hero-side{padding-bottom:0;align-self:center}}
 .side-note{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
 .mini-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
 .mini-card .k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .mini-card .v{font-size:13px;margin-top:6px;line-height:1.5}
 /* strip */
 .strip{background:var(--ink);color:var(--bg);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden}
-.strip-inner{display:flex;gap:0;overflow:auto;scrollbar-width:none}
+.strip-inner{display:flex;gap:0;overflow:auto;scrollbar-width:none;justify-content:center}
 .strip-inner::-webkit-scrollbar{display:none}
 .strip-item{white-space:nowrap;padding:14px 22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.08);color:rgba(250,248,245,.7)}
+@media(max-width:900px){.strip-inner{justify-content:flex-start}}
 /* sections */
 .sec{padding:56px 0;border-top:1px solid var(--line)}
 @media(min-width:768px){.sec{padding:72px 0}}
@@ -142,7 +144,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
   <div class="container hdr">
     <div class="hdr-left">
       <div class="logo">DV</div>
-      <div class="hdr-name"><strong>DAWID VERMAAK</strong><span>FINANCE PROFESSIONAL</span></div>
+      <div class="hdr-name"><strong>DAWID VERMAAK</strong><span>FINANCE & TREASURY EXECUTIVE</span></div>
     </div>
     <nav class="nav">
       <a href="#capability">Capability</a>
@@ -156,6 +158,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
 
 <section class="container hero">
   <div>
+    <div class="badge">AVAILABLE FOR OPPORTUNITIES · AUSTRALIAN PERMANENT RESIDENT</div>
     <div class="headshot-row">
       <img class="headshot" src="headshot.jpg" alt="Dawid Vermaak" onerror="this.style.display='none'">
       <div class="headshot-meta">
@@ -164,9 +167,9 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
       </div>
     </div>
     <h1 class="h1">DAWID<i>VERMAAK</i></h1>
-    <div class="h1-sub" style="margin-top:18px;color:var(--ink);font-weight:500">TREASURY · CORPORATE FINANCE · FP&A · FINANCIAL CONTROL</div>
-    <div style="margin-top:10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500">CA (SA) · CPA Australia · 20+ Years</div>
-    <p class="hero-copy" style="margin-top:28px">Senior finance professional with 20+ years' experience across treasury, corporate finance, financial planning and analysis, financial control, banking and investment environments.</p>
+    <div class="h1-sub" style="color:var(--ink)">TREASURY · CORPORATE FINANCE · FP&A · FINANCIAL CONTROL</div>
+    <div style="margin-top:10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500">CA (SA) · CPA Australia · 20+ Years</div>
+    <p class="hero-copy" style="margin-top:26px">Senior finance professional with 20+ years' experience across treasury, corporate finance, financial planning and analysis, financial control, banking and investment environments.</p>
     <p class="hero-copy2">Experience includes group treasury responsibility across seven countries within a US$2B+ FTSE100-owned business, together with listed property, development banking, fintech and agriculture.</p>
     <div class="hero-actions">
       <a href="#experience" class="btn">VIEW EXPERIENCE ↓</a>
@@ -204,6 +207,17 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
       <p class="lead" style="margin-top:12px;font-size:15px">He has worked across both established corporate environments and businesses undergoing change — bringing disciplined financial control while supporting the decisions required for growth.</p>
     </div>
     <div>
+      <div class="eyebrow">Career at a glance</div>
+      <div class="numbers">
+        <div class="num"><div class="num-val">20+</div><div class="num-lab">Years' Experience</div></div>
+        <div class="num"><div class="num-val">7</div><div class="num-lab">Countries</div></div>
+        <div class="num"><div class="num-val">$400M</div><div class="num-lab">Debt & Equity Financing Arranged</div></div>
+        <div class="num"><div class="num-val">AUD $50M</div><div class="num-lab">Facilities Extended</div></div>
+        <div class="num"><div class="num-val">$3B</div><div class="num-lab">REIT / Banking Portfolio Exposure</div></div>
+        <div class="num"><div class="num-val">FTSE100</div><div class="num-lab">Group Environment</div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="capability" class="sec">
@@ -377,11 +391,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
 <footer>
   <div class="container foot">
     <div style="display:flex;gap:12px;align-items:center"><div class="logo" style="width:24px;height:24px;font-size:10px">DV</div><span><strong>DAWID VERMAAK</strong> — FINANCE & TREASURY — CA (SA) · CPA AUSTRALIA — Joanna, South Australia · Australian Permanent Resident</span></div>
-    <div style="display:flex;gap:16px;align-items:center">
-      <span>© 2026 Dawid Vermaak</span>
-      <span style="opacity:.4">·</span>
-      <span>Site designed and maintained by <a href="https://akchally.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">akchally.com</a></span>
-    </div>
+    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span>© 2026 Dawid Vermaak</span><span style="opacity:.4">·</span><span>Site designed and maintained by <a href="https://akchally.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">akchally.com</a></span></div>
   </div>
 </footer>
 
