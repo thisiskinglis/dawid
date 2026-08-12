@@ -6,7 +6,21 @@
 <title>Dawid Vermaak — Finance Professional</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FAF8F5;--ink:#1A1A1A;--muted:#8A7E74;--line:#E9E2DA;--line2:#F0E9E0;--accent:#C17A4A;--accent2:#A05C2E;--white:#fff}
+:root{
+  --bg:#FFFFFF;
+  --bg-soft:#F4F6F9;
+  --bg-soft-2:#EEF2F7;
+  --ink:#0B1220;
+  --muted:#475569;
+  --line:#CBD5E1;
+  --line2:#E2E8F0;
+  --accent:#102A54; /* NAVY - proper */
+  --accent2:#081A36; /* darker navy */
+  --accent-light:#E9EEF7; /* light navy tint - more contrast than pale blue */
+  --accent-border:#9FB3D3;
+  --accent-strong:#1A3A6B;
+  --white:#FFFFFF;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.65}
@@ -15,7 +29,7 @@ a{color:inherit;text-decoration:none}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 @media(min-width:768px){.container{padding:0 40px}}
 /* header */
-header{position:sticky;top:0;z-index:40;background:rgba(250,248,245,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .hdr{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{width:32px;height:32px;border-radius:9px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:'Playfair Display';font-weight:600;font-size:13px}
 .hdr-left{display:flex;align-items:center;gap:12px}
@@ -26,15 +40,16 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,248,245,.92);backdro
 @media(min-width:900px){.nav{display:flex}}
 .nav a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:.2s}
 .nav a:hover{color:var(--ink)}
-.btn{height:36px;padding:0 18px;border-radius:999px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font-size:11.5px;letter-spacing:.08em;font-weight:500;transition:.2s}
-.btn:hover{background:#000}
-.btn-light{height:36px;padding:0 18px;border-radius:999px;background:#fff;border:1px solid var(--line);display:inline-flex;align-items:center;font-size:11.5px;letter-spacing:.08em}
+.btn{height:36px;padding:0 18px;border-radius:999px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font-size:11.5px;letter-spacing:.08em;font-weight:500;transition:.2s;border:1px solid var(--ink)}
+.btn:hover{background:#020617}
+.btn-light{height:36px;padding:0 18px;border-radius:999px;background:#fff;border:1px solid var(--line);display:inline-flex;align-items:center;font-size:11.5px;letter-spacing:.08em;color:var(--ink)}
+.btn-light:hover{background:var(--bg-soft)}
 /* hero */
 .hero{padding:56px 0 32px;display:grid;gap:32px;align-items:start}
 @media(min-width:900px){.hero{grid-template-columns:1.15fr .85fr;padding:80px 0 48px;align-items:center}}
 .badge{display:inline-flex;border:1px solid var(--line);background:#fff;padding:6px 12px;border-radius:999px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .headshot-row{display:flex;align-items:center;gap:14px;margin-top:22px}
-.headshot{width:56px;height:56px;border-radius:16px;object-fit:cover;border:1px solid var(--line);box-shadow:0 8px 20px -12px rgba(0,0,0,.3);background:#fff}
+.headshot{width:56px;height:56px;border-radius:16px;object-fit:cover;border:1px solid var(--line);box-shadow:0 8px 20px -12px rgba(0,0,0,.15);background:#fff}
 @media(min-width:768px){.headshot{width:64px;height:64px;border-radius:18px}}
 .headshot-meta{line-height:1.15}
 .headshot-name{font-family:'Playfair Display';font-size:14px;font-weight:600}
@@ -42,98 +57,104 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,248,245,.92);backdro
 .h1{font-family:'Playfair Display';font-size:44px;line-height:.85;letter-spacing:-.04em;font-weight:600;margin-top:18px}
 @media(min-width:768px){.h1{font-size:62px}}
 @media(min-width:1100px){.h1{font-size:68px}}
-.h1 i{font-weight:400;color:var(--accent2);font-style:italic;display:block}
+.h1 i{font-weight:400;color:var(--accent);font-style:italic;display:block}
 .h1-sub{margin-top:16px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500}
-.hero-copy{font-size:17px;line-height:1.7;color:#3A3530;font-weight:300;max-width:560px;margin-top:24px}
-.hero-copy2{margin-top:12px;font-size:14.5px;line-height:1.7;color:#6B6560;max-width:520px}
+.hero-copy{font-size:17px;line-height:1.7;color:#1E293B;font-weight:300;max-width:560px;margin-top:24px}
+.hero-copy2{margin-top:12px;font-size:14.5px;line-height:1.7;color:#475569;max-width:520px}
 .hero-actions{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
 .hero-side{padding-top:12px;display:flex;flex-direction:column;justify-content:center}
 @media(min-width:900px){.hero-side{padding-bottom:0;align-self:center}}
 .side-note{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.mini-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
-.mini-card .k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.mini-card .v{font-size:13px;margin-top:6px;line-height:1.5}
+.mini-card{background:var(--bg-soft);border:1.5px solid var(--line);border-radius:20px;padding:20px}
+.mini-card .k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.mini-card .v{font-size:13px;margin-top:6px;line-height:1.5;color:var(--ink);font-weight:500}
 /* strip */
-.strip{background:var(--ink);color:var(--bg);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden}
+.strip{background:#0F172A;color:#F8FAFC;border-top:1px solid #0F172A;border-bottom:1px solid #0F172A;overflow:hidden}
 .strip-inner{display:flex;gap:0;overflow:auto;scrollbar-width:none;justify-content:center}
 .strip-inner::-webkit-scrollbar{display:none}
-.strip-item{white-space:nowrap;padding:14px 22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.08);color:rgba(250,248,245,.7)}
+.strip-item{white-space:nowrap;padding:14px 22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.08);color:rgba(248,250,252,.7)}
 @media(max-width:900px){.strip-inner{justify-content:flex-start}}
 /* sections */
 .sec{padding:56px 0;border-top:1px solid var(--line)}
 @media(min-width:768px){.sec{padding:72px 0}}
-.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#A99E95}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#94A3B8}
 .h2{font-family:'Playfair Display';font-size:32px;line-height:1;letter-spacing:-.02em;margin-top:12px}
 @media(min-width:768px){.h2{font-size:44px}}
-.lead{margin-top:20px;font-size:16.5px;line-height:1.7;color:#3A3530;font-weight:300;max-width:720px}
+.lead{margin-top:20px;font-size:16.5px;line-height:1.7;color:#334155;font-weight:300;max-width:720px}
 .grid-2{display:grid;gap:32px}
 @media(min-width:900px){.grid-2{grid-template-columns:1.15fr .85fr}}
 /* numbers */
 .numbers{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
 @media(min-width:700px){.numbers{grid-template-columns:repeat(3,1fr)}}
 .num{background:#fff;padding:20px 22px}
-.num-val{font-family:'Playfair Display';font-size:28px;line-height:1}
+.num-val{font-family:'Playfair Display';font-size:28px;line-height:1;color:var(--ink)}
 .num-lab{margin-top:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.4}
 /* capability */
 .cap-grid{margin-top:32px;display:grid;gap:16px}
 @media(min-width:700px){.cap-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1000px){.cap-grid{grid-template-columns:repeat(3,1fr)}}
-.cap{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
-.cap h4{font-size:13px;letter-spacing:.02em;font-weight:600;text-transform:uppercase}
-.cap p{margin-top:8px;font-size:13px;line-height:1.6;color:#5A5550}
+.cap{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:22px;transition:.2s}
+.cap:hover{border-color:var(--accent-border);box-shadow:0 6px 24px -12px rgba(16,42,84,.25)}
+.cap h4{font-size:13px;letter-spacing:.02em;font-weight:700;text-transform:uppercase;color:var(--ink)}
+.cap p{margin-top:8px;font-size:13px;line-height:1.6;color:#334155}
 /* impact */
 .impact-grid{margin-top:32px;display:grid;gap:16px}
 @media(min-width:800px){.impact-grid{grid-template-columns:repeat(2,1fr)}}
-.imp{background:#FFFBF6;border:1px solid #EFE2D2;border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
-.imp-val{font-family:'Playfair Display';font-size:36px;line-height:1}
-.imp-lab{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin-top:6px;font-weight:600}
-.imp-txt{margin-top:12px;font-size:13px;line-height:1.6;color:#4A3F37}
+.imp{background:#FFFFFF;border:1.5px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.imp-val{font-family:'Playfair Display';font-size:36px;line-height:1;color:var(--accent)}
+.imp-lab{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:6px;font-weight:700}
+.imp-txt{margin-top:12px;font-size:13px;line-height:1.6;color:#1E293B}
 /* experience */
 .timeline{margin-top:36px;position:relative}
-@media(min-width:800px){.timeline:before{content:'';position:absolute;left:13px;top:0;bottom:0;width:1px;background:var(--line)}}
+@media(min-width:800px){.timeline:before{content:'';position:absolute;left:14px;top:0;bottom:0;width:2px;background:#CBD5E1}}
 .exp{position:relative;margin-bottom:28px}
 .exp-dot{display:none}
-@media(min-width:800px){.exp-dot{position:absolute;left:0;top:28px;width:28px;height:28px;border-radius:999px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center}.exp-dot i{width:8px;height:8px;background:var(--accent);border-radius:999px;display:block}}
-.exp-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}
-@media(min-width:800px){.exp-card{margin-left:48px;padding:28px}}
-.exp-year{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--ink);padding:4px 10px;border-radius:999px;display:inline-block}
-.exp-company{font-family:'Playfair Display';font-size:20px;margin-top:12px;font-weight:500}
-.exp-role{font-size:13px;color:var(--accent);font-weight:500;margin-top:2px}
+@media(min-width:800px){.exp-dot{position:absolute;left:0;top:28px;width:30px;height:30px;border-radius:999px;background:#fff;border:2px solid var(--accent);display:grid;place-items:center;box-shadow:0 0 0 4px #fff}.exp-dot i{width:10px;height:10px;background:var(--accent);border-radius:999px;display:block}}
+.exp-card{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 1px 2px rgba(16,42,84,.04)}
+@media(min-width:800px){.exp-card{margin-left:52px;padding:28px}}
+.exp-year{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--ink);padding:5px 12px;border-radius:999px;display:inline-block;font-weight:700}
+.exp-company{font-family:'Playfair Display';font-size:20px;margin-top:12px;font-weight:600;color:var(--ink)}
+.exp-role{font-size:13px;color:var(--accent);font-weight:700;margin-top:2px}
 .exp-meta{font-size:12px;color:var(--muted);font-style:italic;margin-top:6px}
-.exp-desc{margin-top:14px;font-size:13.5px;line-height:1.6;color:#3E3A36}
-.result{margin-top:16px;background:#FFFBF6;border:1px solid #EFE2D2;border-left:3px solid var(--accent);border-radius:10px;padding:10px 14px}
-.result-lab{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:600}
-.result-txt{margin-top:3px;font-size:13px;line-height:1.5;color:#4A3F37}
-.earlier{margin-top:24px;background:var(--bg);border:1px dashed var(--line);border-radius:16px;padding:20px 22px}
-.earlier p{font-size:13px;color:#5A5550;line-height:1.7}
-.earlier strong{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.exp-desc{margin-top:14px;font-size:13.5px;line-height:1.6;color:#1E293B;font-weight:400}
+.result{margin-top:16px;background:var(--accent-light);border:1.5px solid var(--accent-border);border-left:4px solid var(--accent);border-radius:10px;padding:12px 16px}
+.result-lab{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}
+.result-txt{margin-top:4px;font-size:13px;line-height:1.5;color:var(--ink);font-weight:500}
+.earlier{margin-top:24px;background:var(--bg-soft);border:1.5px dashed var(--line);border-radius:16px;padding:20px 22px}
+.earlier p{font-size:13px;color:#334155;line-height:1.7;font-weight:400}
+.earlier strong{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
 /* creds */
-.creds-grid{margin-top:28px;display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.creds-grid{margin-top:28px;display:grid;gap:1px;background:var(--line);border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
 @media(min-width:700px){.creds-grid{grid-template-columns:1fr 1fr}}
 .cred{background:#fff;padding:22px;display:flex;gap:16px}
-.cred-year{width:36px;height:36px;border-radius:999px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;font-size:11px;flex-shrink:0}
-.cred-name{font-size:13.5px;font-weight:600}
+.cred-year{width:36px;height:36px;border-radius:999px;background:var(--bg-soft-2);border:1.5px solid var(--line);display:grid;place-items:center;font-size:11px;flex-shrink:0;color:var(--accent);font-weight:700}
+.cred-name{font-size:13.5px;font-weight:700;color:var(--ink)}
 .cred-sub{font-size:12px;color:var(--muted);margin-top:2px}
 /* sectors */
 .sectors{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.sector{background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:999px;font-size:11.5px;letter-spacing:.04em;color:#3A3530}
+.sector{background:#fff;border:1.5px solid var(--line);padding:7px 12px;border-radius:999px;font-size:11.5px;letter-spacing:.04em;color:var(--ink);font-weight:500}
 .sector-note{margin-top:16px;font-size:13px;color:var(--muted);max-width:600px;line-height:1.6;font-style:italic}
-/* aus */
-.aus{background:var(--ink);color:var(--bg);border-radius:24px;padding:32px;margin-top:28px}
+/* aus - now light blue/grey not dark brown */
+.aus{background:var(--bg-soft);color:var(--ink);border-radius:24px;padding:32px;margin-top:28px;border:1.5px solid var(--line)}
 @media(min-width:800px){.aus{padding:36px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}}
-.aus h3{font-family:'Playfair Display';font-size:28px;line-height:1.1}
-.aus p{margin-top:12px;font-size:13.5px;line-height:1.7;color:rgba(250,248,245,.7)}
+.aus h3{font-family:'Playfair Display';font-size:28px;line-height:1.1;color:var(--ink)}
+.aus p{margin-top:12px;font-size:13.5px;line-height:1.7;color:#334155}
+.aus-blue{background:var(--accent);color:#fff;border-radius:24px;padding:32px;margin-top:28px;border:1.5px solid var(--accent2)}
+.aus-blue h3{color:#fff}
+.aus-blue p{color:#D4DDEF}
 .pills{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
-.pill{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:11px}
+.pill{padding:7px 13px;border-radius:999px;background:var(--white);border:1.5px solid var(--line);font-size:11px;color:var(--accent);font-weight:700}
+.pill-dark{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.22);font-size:11px;color:#fff;font-weight:600}
 /* contact */
 .contact-wrap{display:grid;gap:32px}
 @media(min-width:800px){.contact-wrap{grid-template-columns:1.1fr .9fr}}
 .c-big{font-family:'Playfair Display';font-size:44px;line-height:.95;letter-spacing:-.02em}
 @media(min-width:768px){.c-big{font-size:56px}}
 .c-list{margin-top:24px;display:grid;gap:16px}
-.c-lab{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#A99E95}
-.c-val{margin-top:6px;font-size:16px;font-weight:500}
-.c-val a{text-decoration:underline;text-decoration-color:rgba(193,122,74,.35);text-underline-offset:5px}
+.c-lab{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#94A3B8}
+.c-val{margin-top:6px;font-size:16px;font-weight:500;color:var(--ink)}
+.c-val a{text-decoration:underline;text-decoration-color:rgba(37,99,235,.25);text-underline-offset:5px}
+.c-val a:hover{text-decoration-color:var(--accent)}
 footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
 .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:11px;color:var(--muted);letter-spacing:.08em}
 </style>
@@ -179,9 +200,9 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
     <div class="side-note">Executive snapshot</div>
     <div class="mini-card">
       <div class="k">Location</div><div class="v">Joanna, South Australia — Permanent Resident</div>
-      <div style="height:1px;background:var(--line2);margin:14px 0"></div>
+      <div style="height:1px;background:var(--line);margin:14px 0"></div>
       <div class="k">Focus</div><div class="v">Treasury Management, Corporate Finance, Financial Control, FP&A, Risk & Compliance</div>
-      <div style="height:1px;background:var(--line2);margin:14px 0"></div>
+      <div style="height:1px;background:var(--line);margin:14px 0"></div>
       <div class="k">Contact</div><div class="v">dawid.vermaak@gmail.com<br>+61 433 432 472</div>
     </div>
   </div>
@@ -205,7 +226,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
       <p class="lead" style="margin-top:16px;font-size:15px">His career includes responsibility across seven-country operations, group treasury within a USD $2B+ FTSE100-owned business, major debt and equity transactions, listed property, development banking and high-growth fintech.</p>
       <p class="lead" style="margin-top:12px;font-size:15px">He has worked across both established corporate environments and businesses undergoing change — bringing disciplined financial control while supporting the decisions required for growth.</p>
     </div>
-    <div>
+    <div></div>
+  </div>
 </section>
 
 <section id="capability" class="sec">
@@ -333,21 +355,28 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
     <div>
       <div class="aus">
         <div>
-          <div class="eyebrow" style="color:rgba(255,255,255,.5)">Australia</div>
+          <div class="eyebrow" style="color:var(--muted)">Australia</div>
           <h3 class="serif">Based in South Australia. International experience. Australian availability.</h3>
           <p>Dawid is based in Joanna, South Australia and is an Australian Permanent Resident. He is open to suitable opportunities where his background in treasury, corporate finance and financial management can contribute to organisations requiring experienced financial leadership and disciplined capital management.</p>
         </div>
         <div>
-          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px">Primary Role Alignment</div>
+          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Primary Role Alignment</div>
           <div class="pills">
             <span class="pill">Treasury Manager</span>
             <span class="pill">Corporate Finance</span>
             <span class="pill">Finance Manager</span>
             <span class="pill">Financial Planning & Analysis</span>
           </div>
-          <div style="margin-top:20px"><a href="mailto:dawid.vermaak@gmail.com" class="btn" style="background:#fff;color:#111">DISCUSS AN OPPORTUNITY →</a></div>
+          <div style="margin-top:20px"><a href="mailto:dawid.vermaak@gmail.com" class="btn" style="background:var(--accent);border-color:var(--accent)">DISCUSS AN OPPORTUNITY →</a></div>
         </div>
       </div>
+
+      <div class="aus-blue" style="margin-top:16px">
+        <div class="eyebrow" style="color:rgba(255,255,255,.7)">Availability</div>
+        <h3 class="serif" style="font-size:22px;margin-top:8px;line-height:1.2">Open to executive finance opportunities requiring disciplined capital management.</h3>
+        <p style="margin-top:12px">Joanna, SA · Remote / Hybrid / On-site considered · Australian Permanent Resident</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -362,14 +391,14 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#fff}
         <div><div class="c-lab">Name</div><div class="c-val serif" style="font-size:20px">Dawid Vermaak — CA (SA) · CPA Australia</div></div>
         <div><div class="c-lab">Email</div><div class="c-val"><a href="mailto:dawid.vermaak@gmail.com">dawid.vermaak@gmail.com</a></div></div>
         <div><div class="c-lab">Phone</div><div class="c-val"><a href="tel:+61433432472">+61 433 432 472</a></div></div>
-        <div><div class="c-lab">Location</div><div class="c-val" style="font-size:14px;font-weight:400;color:#5A5550">Joanna, South Australia — Australian Permanent Resident</div></div>
+        <div><div class="c-lab">Location</div><div class="c-val" style="font-size:14px;font-weight:400;color:#475569">Joanna, South Australia — Australian Permanent Resident</div></div>
       </div>
-      <div style="margin-top:28px"><a href="mailto:dawid.vermaak@gmail.com" class="btn">EMAIL DAWID →</a></div>
+      <div style="margin-top:28px"><a href="mailto:dawid.vermaak@gmail.com" class="btn" style="background:var(--accent);border-color:var(--accent)">EMAIL DAWID →</a></div>
     </div>
     <div style="display:flex;align-items:end;justify-content:flex-start">
-      <div style="border:1px solid var(--line);border-radius:20px;padding:24px;background:var(--bg);width:100%">
+      <div style="border:1px solid var(--line);border-radius:20px;padding:24px;background:var(--bg-soft);width:100%">
         <div class="eyebrow">Availability</div>
-        <div style="margin-top:8px;font-size:14px;line-height:1.6;color:#3A3530">Available for suitable executive opportunities where treasury, corporate finance and financial management capability can contribute to disciplined capital management and growth.</div>
+        <div style="margin-top:8px;font-size:14px;line-height:1.6;color:#334155">Available for suitable executive opportunities where treasury, corporate finance and financial management capability can contribute to disciplined capital management and growth.</div>
         <div style="margin-top:16px;font-size:12px;color:var(--muted)">Joanna, SA · Remote / Hybrid / On-site considered</div>
       </div>
     </div>
